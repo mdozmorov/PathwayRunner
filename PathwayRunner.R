@@ -48,7 +48,7 @@ for (i in 1:length(gene.list)){ # Test gene sets of interest one by one
   }
 }
 Sys.time() # Ending time
-
+# Full run takes about 20 min
 
 # Clustering and visualization of pathway connectivity
 mtx.cor<-cor(mtx.pval) #, use="pairwise.complete.obs")

@@ -3,7 +3,7 @@ library(biomaRt)
 mart<-useMart("ensembl", dataset="hsapiens_gene_ensembl")
 
 name2Entrez<-function(names){ # Gene name to Entrez
-  as.vector(as.matrix(getBM(attributes='entrezgene', filters='wikigene_name', values=names, mart=mart, uniqueRows=T)))
+  as.vector(as.matrix(getBM(attributes='entrezgene', filters='hgnc_symbol', values=names, mart=mart, uniqueRows=T)))
 }
 
 uniprot2Entrez<-function(names){ # UniProt to Entrez
